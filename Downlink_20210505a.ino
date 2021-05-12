@@ -166,9 +166,9 @@ void loop()
  
         mcci_sigfox_response_e a;
 	
-	uint8_t* buffer[10];
+	uint8_t* buffer;
 
-        a = Sigfox.sendFrameWithAck(mess,8, buffer[10]);
+        a = Sigfox.sendFrameWithAck(mess,8, buffer);
       
  		if(a == SIGFOX_TXRX_NO_DOWNLINK)
    		{
