@@ -165,8 +165,10 @@ void loop()
 	delay(19*60*1000);
  
         mcci_sigfox_response_e a;
+	
+	uint8_t* buffer[10];
 
-        a = Sigfox.sendFrameWithAck(mess,8, NULL);
+        a = Sigfox.sendFrameWithAck(mess,8, buffer[10]);
       
  		if(a == SIGFOX_TXRX_NO_DOWNLINK)
    		{
