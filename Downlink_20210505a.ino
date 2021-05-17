@@ -19,14 +19,14 @@ Copyright notice:
  
  #include "MCCI_Sigfox.h"
  
-/****************************************************************************
+/*****************************************************************************
 | This is one of the first ways toi setup the library
 | You can define your own function. As an exemple if you need to
 | store the ids in the eeprom for an industrial production
 | or if you setup them using a serial line then in eeprom
 | you can rewrite these function ot make it working.
 | They are callback function the library use to acces the informations
-\****************************************************************************/
+\*****************************************************************************/
 
 MCCI_Sigfox Sigfox( "01415DEE", "814890597F820C8A", "5B54ED1A889FC76FC575A3D201482E45", REGION_RC2,0x8080008,false); 
 
