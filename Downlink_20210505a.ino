@@ -132,6 +132,14 @@ void loop()
  	
         status = Sigfox.sendFrameWithAck(mess,8, buffer);
  	if(status == SIGFOX_TXRX_NO_DOWNLINK)
+ 
+        mcci_sigfox_response_e a;
+	
+	uint8_t* buffer;
+
+        a = Sigfox.sendFrameWithAck(mess,8, buffer);
+      
+ 		if(a == SIGFOX_TXRX_NO_DOWNLINK)
    		{
         	Serial.println(" SIGFOX_TXRX_NO_DOWNLINK");
       		}
